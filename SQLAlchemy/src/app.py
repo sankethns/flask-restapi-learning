@@ -1,3 +1,6 @@
+'''
+Starts the REST API Server
+'''
 
 from flask import Flask
 from flask_restful import Api

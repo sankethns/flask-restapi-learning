@@ -1,5 +1,6 @@
 '''
-Starts the REST API Server
+Starts the REST API Server.
+Create an Olympic database
 '''
 
 from flask import Flask

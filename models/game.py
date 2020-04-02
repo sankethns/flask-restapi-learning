@@ -8,7 +8,7 @@ class GameModel(db.Model):
     __bind_key__ = 'sports'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Integer)
+    name = db.Column(db.String)
     schedule = db.Column(db.String)
     sport_id = db.Column(db.Integer, db.ForeignKey('sports.id'))
     sport_name = db.Column(db.String)

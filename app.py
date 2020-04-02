@@ -3,6 +3,7 @@ Starts the REST API Server.
 Create an Olympic database
 '''
 
+import os
 from flask import Flask
 from flask_restful import Api
 from security import authenticate, identity
@@ -15,10 +16,9 @@ app = Flask(__name__)
 api = Api(app)
 app.config['SECRET_KEY'] = 'qwer1234!@#$'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///games.db'
 app.config['SQLALCHEMY_BINDS'] = {
-    'users' : 'sqlite:///users.db',
-    'sports' : 'sqlite:///sports.db',
+    'users' : os.environ.get('DATABASE_URL'),
+    'sports' : os.envron.get('HEROKU_POSTGRESQL_IVORY_URL'),
 }
 jwt = JWT(app, authenticate, identity) # /auth
 

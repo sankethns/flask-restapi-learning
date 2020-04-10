@@ -5,7 +5,7 @@ import sqlite3
 class UserModel(db.Model):
 
     __tablename__ = 'users'
-    __bind_key__ = 'users'
+    __bind_key__ = 'data'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80))

@@ -3,7 +3,7 @@ from db import db
 class SportModel(db.Model):
 
     __tablename__ = 'sports'
-    __bind_key__ = 'sports'
+    __bind_key__ = 'data'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)

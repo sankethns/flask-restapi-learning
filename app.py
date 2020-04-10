@@ -17,8 +17,7 @@ api = Api(app)
 app.config['SECRET_KEY'] = 'qwer1234!@#$'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_BINDS'] = {
-    'users' : os.environ.get('DATABASE_URL', 'sqlite3:///users.db'),
-    'sports' : os.environ.get('HEROKU_POSTGRESQL_IVORY_URL', 'sqlite3:///sports.db'),
+    'data' : os.environ.get('DATABASE_URL', 'sqlite3:///data.db'),
 }
 jwt = JWT(app, authenticate, identity) # /auth
 

@@ -5,7 +5,7 @@ from models.sport import SportModel
 class GameModel(db.Model):
 
     __tablename__ = 'games'
-    __bind_key__ = 'sports'
+    __bind_key__ = 'data'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Integer)

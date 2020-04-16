@@ -1,6 +1,7 @@
 '''
 Starts the REST API Server.
 Create an Olympic database
+Hosted on DigitalOcean
 '''
 
 import os
